@@ -10,5 +10,14 @@ export function getTypeOfTriangle(
   sideB: number,
   sideC: number
 ): TriangleType {
-  return TriangleType.Unknown;
+  if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
+    return TriangleType.Unknown;
+  }
+  if (sideA === sideB && sideB === sideC) {
+    return TriangleType.Equilateral;
+  }
+  if (sideA === sideB || sideB === sideC || sideA === sideC) {
+    return TriangleType.Isosceles;
+  }
+  return TriangleType.Scalene;
 }
