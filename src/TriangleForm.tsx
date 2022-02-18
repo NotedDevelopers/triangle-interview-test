@@ -7,7 +7,7 @@ export const TriangleForm = () => {
 
   return (
     <form onSubmit={submitForm} className="form">
-      <h3>Write the triangle spec</h3>
+      <h3>Write the triangle function and spec</h3>
       <div className="fieldset">
         <label htmlFor="sideA">Side A</label>
         <input id="sideA" name="sideA" type="number" />
