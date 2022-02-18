@@ -1,8 +1,16 @@
 import React from "react";
+import { getTypeOfTriangle } from "./helpers/triangle";
 
 export const TriangleForm = () => {
   function submitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const formValues = Array.from(formData.values());
+    const args = formValues.map(Number);
+    const triangleType = getTypeOfTriangle(
+      ...(args as [number, number, number])
+    );
+    alert(`${triangleType} triangle`);
   }
 
   return (
