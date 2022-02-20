@@ -6,9 +6,9 @@ export enum TriangleType {
 }
 
 export function getTypeOfTriangle(
-  a: number,
-  b: number,
-  c: number
+  sideA: number,
+  sideB: number,
+  sideC: number
 ): TriangleType {
   return TriangleType.Unknown;
 }
